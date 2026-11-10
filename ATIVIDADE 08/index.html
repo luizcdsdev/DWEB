@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Opinião - Cinema</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Pesquisa de Opinião</h1>
+    <div class="counter" id="contador">Respostas Coletadas: 0 / 45</div>
+
+    <form id="formPesquisa">
+      <div class="form-group">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" min="0" max="120" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" required>
+          <option value="">Selecione...</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="opiniao">Opinião sobre o filme:</label>
+        <select id="opiniao" required>
+          <option value="">Selecione...</option>
+          <option value="4">Ótimo</option>
+          <option value="3">Bom</option>
+          <option value="2">Regular</option>
+          <option value="1">Péssimo</option>
+        </select>
+      </div>
+
+      <button type="submit" id="btnEnviar">Enviar Resposta</button>
+    </form>
+
+    <div id="painelResultados" class="results hidden">
+      <h2>Estatísticas em Tempo Real</h2>
+      <div class="result-grid">
+        <div class="result-item"><span>Média de idade:</span> <strong id="resMedia">0</strong></div>
+        <div class="result-item"><span>Pessoa mais velha:</span> <strong id="resMaisVelha">0</strong></div>
+        <div class="result-item"><span>Pessoa mais nova:</span> <strong id="resMaisNova">0</strong></div>
+        <div class="result-item"><span>Respostas "Péssimo":</span> <strong id="resPessimo">0</strong></div>
+        <div class="result-item"><span>Porcentagem "Ótimo" e "Bom":</span> <strong id="resPorcentagem">0%</strong></div>
+        <div class="result-item"><span>Mulheres:</span> <strong id="resMulheres">0</strong></div>
+        <div class="result-item"><span>Homens:</span> <strong id="resHomens">0</strong></div>
+        <div class="result-item"><span>Outros:</span> <strong id="resOutros">0</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="pesquisa.js"></script>
+</body>
+</html>
